@@ -1,0 +1,73 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data
+uploads/
+logs/
+*.log
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Scratch / agent artifacts
+scratch/
+_scratch/
+*.tmp
+*.jar
+
+# Harness/runtime artifacts
+tests-artifacts/
+prestart-services.json
+.env*
+*.pyc
+*.pid
+.code_index/
+.codegraph/
+.gradle/
+.job_logs/
+node_modules/
+target/
+.bridge_source_job_id
+.microservices_ports.json
+.tunnel_pids.json
+api_test_report.xlsx
+generate_api_report.py
+generate_changes_report.py
+generate_project_report.py
+pr_url.txt
+project_report.docx
+send_report_email.py
+server.log
+start.log
+test_results.md
+verifier-report.json
+/_[!_]*.py
+/.[!.]*.py
+/generate*report*.py
+/gen_report*.py
+/gen_docx*.py
+/live_verify*.py
+/scripts/generate*report*.py
+/scripts/gen_report*.py
+/scripts/gen_docx*.py

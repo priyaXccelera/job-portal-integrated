@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: 246 248 252;
+  --surface: 255 255 255;
+  --ink: 17 24 39;
+  --muted: 100 110 128;
+  --line: 227 231 238;
+  --soft: 233 240 255;
+}
+
+.dark {
+  --canvas: 11 16 28;
+  --surface: 19 27 44;
+  --ink: 235 239 246;
+  --muted: 154 164 182;
+  --line: 40 52 74;
+  --soft: 28 42 78;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-white hover:opacity-90;
+  }
+
+  .btn-outline {
+    @apply btn border border-line bg-surface text-ink hover:bg-soft;
+  }
+
+  .btn-danger {
+    @apply btn bg-danger text-white hover:opacity-90;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-surface shadow-card;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full bg-soft px-3 py-1 text-xs font-medium text-primary;
+  }
+}
